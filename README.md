@@ -3,31 +3,31 @@
 ## Informações:
   1. Autor: Otavio Henrique
   2. Tecnologias utilizadas:
-    - HTML5
-    - CSS3
-    - Javascript
-    - Typescript
-    - Nodejs
-    - Reactjs
-    - React Elastic Carousel
-    - React Redux
-    - Redux Toolkit
-    - Axios
-    - Formik
-    - Recharts
-    - Yup
+    - HTML5<br />
+    - CSS3<br />
+    - Javascript<br />
+    - Typescript<br />
+    - Nodejs<br />
+    - Reactjs<br />
+    - React Elastic Carousel<br />
+    - React Redux<br />
+    - Redux Toolkit<br />
+    - Axios<br />
+    - Formik<br />
+    - Recharts<br />
+    - Yup<br />
 
 ## Instruções
-  1. Criar conta de usuario.<br />
-  2. Logar na aplicação.<br />
-  3. Buscar codigo da empresa (codigo da empresa na Nasdaq) no campo de busca.<br />
-  4. Clicar no botao favorito (botao estrela) para favoritar.<br />
-  5. Favoritos são exibidos na parte direita da tela.<br />
-  6. Clicar no icone da lixeira para remover o favorito.<br />
-  7. Empresas recentes são exibidas na parte de baixo da tela.<br />
-  8. Grafico exibe as informações das ações da empresa.<br />
-  9. Clicar nome do usuario no canto superior da parte<br />
-  lateral da tela e selecionar o botao sair para deslogar da conta.<br />
+  1. Criar conta de usuario.
+  2. Logar na aplicação.
+  3. Buscar codigo da empresa (codigo da empresa na Nasdaq) no campo de busca.
+  4. Clicar no botao favorito (botao estrela) para favoritar.
+  5. Favoritos são exibidos na parte direita da tela.
+  6. Clicar no icone da lixeira para remover o favorito.
+  7. Empresas recentes são exibidas na parte de baixo da tela.
+  8. Grafico exibe as informações das ações da empresa.
+  9. Clicar nome do usuario no canto superior da parte
+  lateral da tela e selecionar o botao sair para deslogar da conta.
 
 ## Scripts
 ### `yarn install` ou `npm install`
