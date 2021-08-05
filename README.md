@@ -18,16 +18,28 @@
     - Yup<br />
 
 ## Instruções
-  1. Criar conta de usuario.
-  2. Logar na aplicação.
-  3. Buscar codigo da empresa (codigo da empresa na Nasdaq) no campo de busca.
-  4. Clicar no botao favorito (botao estrela) para favoritar.
-  5. Favoritos são exibidos na parte direita da tela.
-  6. Clicar no icone da lixeira para remover o favorito.
-  7. Empresas recentes são exibidas na parte de baixo da tela.
-  8. Grafico exibe as informações das ações da empresa.
-  9. Clicar nome do usuario no canto superior da parte
+  1. Entrar no site [https://iexcloud.io/](https://iexcloud.io/)<br />
+  da Iexcloud e criar uma conta.
+  2. Selecionar o plano free.
+  3. Ir para o console no site.
+  4. Copiar o API Token
+  5. Criar o arquivo `.env.local` na raiz do projeto
+  6. No arquivo `.env.local`, colocar o codigo:<br />
+    REACT_APP_API_KEY=Colar_aqui_o_seu_API_Token
+  7. Instalar os pacotes do app (`yarn install` ou `npm install`).
+  8. Iniciar a aplicação. (`yarn start` ou `npm start`)
+  9. Abrir a aplicação no navegador.
+  10. Criar conta de usuario.
+  11. Logar na aplicação.
+  12. Buscar codigo da empresa (codigo da empresa na Nasdaq) no campo de busca.
+  13. Clicar no botao favorito (botao estrela) para favoritar.
+  14. Favoritos são exibidos na parte direita da tela.
+  15. Clicar no icone da lixeira para remover o favorito.
+  16. Empresas recentes são exibidas na parte de baixo da tela.
+  17. Grafico exibe as informações das ações da empresa.
+  18. Clicar nome do usuario no canto superior da parte<br>
   lateral da tela e selecionar o botao sair para deslogar da conta.
+  
 
 ## Scripts
 ### `yarn install` ou `npm install`
@@ -57,3 +69,4 @@
   [Documentação do Formik](https://formik.org/docs/overview)<br />
   [Documentação do Recharts](https://recharts.org/en-US/guide)<br />
   [Documentação do Yup](https://github.com/jquense/yup)<br />
+  [Site da Iex Cloud](https://iexcloud.io/)<br />
