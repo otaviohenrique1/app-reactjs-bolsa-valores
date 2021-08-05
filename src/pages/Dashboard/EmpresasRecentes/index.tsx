@@ -8,75 +8,76 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
 
 const EmpresasRecentesContainer = styled.div`
-position: absolute;
-background: #f1ecec;
-margin-top: 39px;
-width: 789px;
-height: 136px;
-left: 115px;
-top: 575px;
+  position: absolute;
+  background: #f1ecec;
+  margin-top: 39px;
+  width: 789px;
+  height: 136px;
+  left: 115px;
+  top: 575px;
+  border-radius: 10px;
 `;
 
 const TituloContainer = styled.div`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-position: absolute;
-width: 198px;
-height: 27px;
-left: 12px;
-top: 0px;
-
-img {
-  position: static;
-  left: 0%;
-  right: 87.88%;
-  top: 0%;
-  bottom: 11.11%;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 8px;
-}
-
-p {
-  position: static;
-  width: 166px;
-  height: 27px;
-  left: 32px;
-  top: 0px;
-  font-family: Graphik;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  display: flex;
-  align-items: center;
-  color: #14171A;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0px 8px;
-}
-
-div {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   padding: 0px;
-
   position: absolute;
-  width: 36px;
-  height: 12px;
-  left: 710px;
-  top: 7px;
+  width: 198px;
+  height: 27px;
+  left: 12px;
+  top: 0px;
 
   img {
-    width: 6px;
-    height: 12px;
+    position: static;
+    left: 0%;
+    right: 87.88%;
+    top: 0%;
+    bottom: 11.11%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 8px;
   }
-}
+
+  p {
+    position: static;
+    width: 166px;
+    height: 27px;
+    left: 32px;
+    top: 0px;
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #14171A;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 36px;
+    height: 12px;
+    left: 710px;
+    top: 7px;
+
+    img {
+      width: 6px;
+      height: 12px;
+    }
+  }
 `;
 
 const ItemEstilizado = styled.div`

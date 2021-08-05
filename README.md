@@ -26,18 +26,18 @@
   6. Clicar no icone da lixeira para remover o favorito.
   7. Empresas recentes são exibidas na parte de baixo da tela.
   8. Grafico exibe as informações das ações da empresa.
+  9. Clicar nome do usuario no canto superior da parte lateral da tela e selecionar o botao sair para deslogar da conta.
 
 ## Scripts
 ### `yarn install` ou `npm install`
   Instala os pacotes do app
 ### `yarn start` ou `npm start`
-  Roda o app em modo de desenvolvimento.<br />
+  Roda o app em modo de desenvolvimento.
   Abrir [http://localhost:3000](http://localhost:3000) no navegador para ver a aplicação funcionando.
 ### `yarn test` ou `npm test`
   Roda os testes
 ### `yarn build` ou `npm build`
   Gera uma versão de produção do app, localizado na pasta `build`.
-
 ### `yarn eject` ou `npm eject`
   Ejeta a aplicação.
 

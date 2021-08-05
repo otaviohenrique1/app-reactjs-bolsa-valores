@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import avatar from "../../../assets/images/avatar.png";
+import avatar from "../../../assets/images/avatar.svg";
 import { ItemFavoritado } from "../../../components/Item";
 import { Dropdown } from "../../../components/Dropdown";
 import { AiFillStar } from "react-icons/ai";

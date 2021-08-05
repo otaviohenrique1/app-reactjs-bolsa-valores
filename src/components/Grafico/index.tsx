@@ -148,7 +148,6 @@ export function Grafico(props: GraficoProps) {
   );
 }
 
-/* Parte da area das informações da empresa */
 interface AreaDadosProps {
   favoritado?: boolean;
   handleSubmitFavorito?: (event: FormEvent) => void;
@@ -178,7 +177,6 @@ function AreaDados(props: AreaDadosProps) {
           <ImagemGraficoSeta porcentagem={props.data.porcentagem || 0} />
           {' '}
           {`$${FormataValorComVirgula(props.data.valor_acao)}`}
-          {/* {`$${(props.data.valor_acao).toString().replace('.', ',')}`} */}
         </ValorAcaoEmpresa>
         <div>
           <ValorAcaoVaricacaoDinheiro valorVariacaoDinheiro={props.data.valor_variacao_dinheiro} />
@@ -190,7 +188,6 @@ function AreaDados(props: AreaDadosProps) {
   );
 }
 
-/* Parte da area do grafico */
 interface AreaGraficoProps {
   data: DataGraficoProps[];
 }
