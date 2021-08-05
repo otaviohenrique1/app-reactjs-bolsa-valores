@@ -145,13 +145,7 @@ export function Dropdown(props: DropdownProps) {
       {(isActive) && (
         <DropdownConteudo>
           <DropdownConteudoLista>
-            <DropdownConteudoBotao>
-              Perfil
-            </DropdownConteudoBotao>
-            <hr />
-            <DropdownConteudoBotao
-              onClick={() => handleClick()}
-            >
+            <DropdownConteudoBotao onClick={() => handleClick()}>
               Sair
             </DropdownConteudoBotao>
           </DropdownConteudoLista>
