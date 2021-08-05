@@ -5,6 +5,7 @@ import { ImagemGraficoSeta, ValorAcaoEmpresa, ValorAcaoPorcentagemBox, ValorAcao
 import { BotaoFavorito } from "../Botao";
 import { FormEvent, useState, useEffect } from "react";
 import { DataProps } from "../../services/types";
+import { FormataValorComVirgula } from "../../utils/utils";
 
 export const GraficoContainer = styled.div`
   display: flex;
@@ -43,6 +44,10 @@ const BotaoFavoritoBox = styled.form`
   right: 94.12%;
   top: 10%;
   bottom: 83.68%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
 `;
 
 const EmpresaDadosBox = styled.div`
@@ -57,6 +62,11 @@ const EmpresaDadosBox = styled.div`
   line-height: 20px;
   letter-spacing: -0.005em;
   color: #14171A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
 `;
 
 const AreaDadosAcoes = styled.div`
@@ -140,7 +150,7 @@ export function Grafico(props: GraficoProps) {
 
 /* Parte da area das informações da empresa */
 interface AreaDadosProps {
-  favoritado: boolean;
+  favoritado?: boolean;
   handleSubmitFavorito?: (event: FormEvent) => void;
   data: DataEmpresaProps;
 }
@@ -167,8 +177,9 @@ function AreaDados(props: AreaDadosProps) {
         <ValorAcaoEmpresa>
           <ImagemGraficoSeta porcentagem={props.data.porcentagem || 0} />
           {' '}
-          {`$${(props.data.valor_acao).toString().replace('.', ',')}`}
-        </ValorAcaoEmpresa><br />
+          {`$${FormataValorComVirgula(props.data.valor_acao)}`}
+          {/* {`$${(props.data.valor_acao).toString().replace('.', ',')}`} */}
+        </ValorAcaoEmpresa>
         <div>
           <ValorAcaoVaricacaoDinheiro valorVariacaoDinheiro={props.data.valor_variacao_dinheiro} />
           {' '}

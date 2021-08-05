@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import graph_up from "../../assets/images/graph-up.svg";
 import graph_down from "../../assets/images/graph-down.svg";
+import { FormataValorComVirgula } from "../../utils/utils";
 
 export const ValorAcaoEmpresa = styled.span`
   font-weight: bold;
@@ -54,8 +55,8 @@ export function ValorAcaoPorcentagem(props: ValorAcaoPorcentagemProps) {
         ((verificaSeValorForNegativo) && 'danger') ||
         ''}
     >
-      {((verificaSeValorForPositivo) && `+${props.porcentagem}%`) ||
-      ((verificaSeValorForNegativo) && `${props.porcentagem}%`)}
+      {((verificaSeValorForPositivo) && `+${FormataValorComVirgula(props.porcentagem)}%`) ||
+      ((verificaSeValorForNegativo) && `${FormataValorComVirgula(props.porcentagem)}%`)}
     </ValorAcaoVariacao>
   );
 }
@@ -93,8 +94,8 @@ export function ValorAcaoVaricacaoDinheiro(props: ValorAcaoVariacaoDinheiroProps
         ((verificaSeValorForNegativo) && 'danger') ||
         ''}
     >
-      ${((verificaSeValorForPositivo) && `+${props.valorVariacaoDinheiro}`) ||
-      ((verificaSeValorForNegativo) && `${props.valorVariacaoDinheiro}`)}
+      ${((verificaSeValorForPositivo) && `+${FormataValorComVirgula(props.valorVariacaoDinheiro)}`) ||
+      ((verificaSeValorForNegativo) && `${FormataValorComVirgula(props.valorVariacaoDinheiro)}`)}
     </ValorAcaoVariacao>
   );
 }

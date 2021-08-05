@@ -47,10 +47,12 @@ export function Item(props: ItemProps) {
         />
       </ItemBox>
       <ItemBox valor_flex={5}>
-        <EmpresaDados
-          codigo_empresa={props.empresa_dados.codigo_empresa}
-          nome_empresa={props.empresa_dados.nome_empresa}
-        />
+        <EmpresaDadosEstilisado>
+          <EmpresaDados
+            codigo_empresa={props.empresa_dados.codigo_empresa}
+            nome_empresa={props.empresa_dados.nome_empresa}
+          />
+        </EmpresaDadosEstilisado>
       </ItemBox>
       <ItemBox valor_flex={3}>
         <ValorAcaoPorcentagem porcentagem={props.valor_porcentagem.porcentagem} />
@@ -59,6 +61,11 @@ export function Item(props: ItemProps) {
     </CardEmpresaEstilizado>
   );
 }
+
+const EmpresaDadosEstilisado = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const ItemFavoritadoBox = styled.div`
   display: flex;

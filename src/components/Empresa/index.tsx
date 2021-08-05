@@ -28,7 +28,7 @@ export interface EmpresaDadosProps {
 export function EmpresaDados(props: EmpresaDadosProps) {
   return (
     <>
-      <CodigoEmpresa>{props.codigo_empresa}</CodigoEmpresa><br />
+      <CodigoEmpresa>{props.codigo_empresa}</CodigoEmpresa>
       <NomeEmpresa>{props.nome_empresa}</NomeEmpresa>
     </>
   );
