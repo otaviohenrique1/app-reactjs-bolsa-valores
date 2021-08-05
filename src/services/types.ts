@@ -8,21 +8,21 @@ export const DataCompanyInitialData: DataCompany = {
   companyName: ''
 };
 
-export interface DataQuote {
-  symbol: string; // codigo_empresa
-  companyName: string; // nome_empresa
+export interface DataQuote extends DataCompany {
   latestPrice: number; // valor_acao
   changePercent: number; // porcentagem
 }
 
-export interface DataHistoricalPrices {
-  // grafico
-  data: DataHistoricalPrice[];
-}
+export const DataQuoteInitialData: DataQuote = {
+  symbol: '',
+  companyName: '',
+  latestPrice: 0,
+  changePercent: 0
+};
 
 export interface DataHistoricalPrice {
-  close: number; // uv => no grafico
-  date: string; // name => no grafico
+  close: number;
+  date: string;
   high: number,
   low: number
 }
@@ -35,13 +35,6 @@ export const DataHistoricalPriceInitialData: DataHistoricalPrice = {
 };
 
 export const DataHistoricalPricesInitialData = [];
-
-export const DataQuoteInitialData: DataQuote = {
-  symbol: '',
-  companyName: '',
-  latestPrice: 0,
-  changePercent: 0
-};
 
 export interface DataValorVariacaoDinheiro {
   high: number;
@@ -63,8 +56,8 @@ export interface DataProps {
   valor_acao: number;
   valor_variacao_dinheiro: number;
   data: {
-    uv: number,
-    name: string
+    close: number,
+    date: string
   }[];
 }
 

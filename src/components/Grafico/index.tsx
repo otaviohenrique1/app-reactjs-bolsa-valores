@@ -4,6 +4,7 @@ import { EmpresaDados } from "../Empresa";
 import { ImagemGraficoSeta, ValorAcaoEmpresa, ValorAcaoPorcentagemBox, ValorAcaoVaricacaoDinheiro } from "../ValorAcao";
 import { BotaoFavorito } from "../Botao";
 import { FormEvent, useState, useEffect } from "react";
+import { DataProps } from "../../services/types";
 
 export const GraficoContainer = styled.div`
   display: flex;
@@ -80,8 +81,8 @@ const AreaGraficoBox = styled.div`
 `;
 
 interface DataGraficoProps {
-  name: string;
-  uv: number;
+  date: string;
+  close: number;
 }
 
 interface DataEmpresaProps {
@@ -101,10 +102,9 @@ const dataEmpresaDadosIniciais = {
 }
 
 interface GraficoProps {
-  dataGrafico: DataGraficoProps[];
+  data: DataProps;
   favoritado: boolean;
-  handleSubmitFavorito?: (event: FormEvent) => void;
-  dataEmpresa: DataEmpresaProps;
+  handleSubmitFavorito: (event: FormEvent) => void;
 }
 
 export function Grafico(props: GraficoProps) {
@@ -112,11 +112,15 @@ export function Grafico(props: GraficoProps) {
   const [dataEmpresa, setDataEmpresa] = useState<DataEmpresaProps>(dataEmpresaDadosIniciais);
 
   useEffect(() => {
-    let dataFavoritos = props.dataGrafico;
-
-    setDataGrafico(dataFavoritos);
-    setDataEmpresa(dataEmpresa);
-  }, [dataEmpresa, props.dataEmpresa, props.dataGrafico]);
+    setDataEmpresa({
+      codigo_empresa: props.data.codigo_empresa,
+      nome_empresa: props.data.nome_empresa,
+      porcentagem: props.data.porcentagem,
+      valor_acao: props.data.valor_acao,
+      valor_variacao_dinheiro: props.data.valor_variacao_dinheiro
+    });
+    setDataGrafico(props.data.data);
+  }, [props.data.codigo_empresa, props.data.data, props.data.nome_empresa, props.data.porcentagem, props.data.valor_acao, props.data.valor_variacao_dinheiro]);
 
   return (
     <GraficoContainer>
@@ -124,13 +128,7 @@ export function Grafico(props: GraficoProps) {
         <AreaDados
           handleSubmitFavorito={props.handleSubmitFavorito}
           favoritado={props.favoritado}
-          data={{
-            codigo_empresa: dataEmpresa.codigo_empresa,
-            nome_empresa: dataEmpresa.nome_empresa,
-            porcentagem: dataEmpresa.porcentagem,
-            valor_acao: dataEmpresa.valor_acao,
-            valor_variacao_dinheiro: dataEmpresa.valor_variacao_dinheiro
-          }}
+          data={dataEmpresa}
         />
       </AreaDadosBox>
       <AreaGraficoBox>
@@ -189,9 +187,9 @@ interface AreaGraficoProps {
 function AreaGrafico(props: AreaGraficoProps) {
   return(
     <LineChart width={700} height={300} data={props.data} margin={{ top: 5, right: 5, bottom: 5, left: 5 }}>
-      <Line type="monotone" dataKey="uv" stroke="#0047BB" />
+      <Line type="monotone" dataKey="close" stroke="#0047BB" />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="name" />
+      <XAxis dataKey="date" />
       <YAxis />
       <Tooltip
         itemStyle={styleTooltip}

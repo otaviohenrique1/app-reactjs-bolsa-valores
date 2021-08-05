@@ -66,7 +66,7 @@ export function AreaUsuario() {
           <span>Empresas favoritas</span>
         </EmpresasFavoritasTitulo>
         {
-          (!data || data.length === 0) ? (
+          (data.length === 0) ? (
             <ContainerMensagemSemDados>
               <h1>Sem dados</h1>
             </ContainerMensagemSemDados>

@@ -1,7 +1,10 @@
+import { Routes } from "./pages/routes";
+
 function App() {
   return (
-    <div>
-    </div>
+    <>
+      <Routes />
+    </>
   );
 }
 
