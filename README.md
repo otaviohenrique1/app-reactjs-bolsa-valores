@@ -2,7 +2,7 @@
 
 ## Informações:
   1. Autor: Otavio Henrique
-  2. Tecnologias utilizadas:
+  2. Tecnologias utilizadas:<br />
     - HTML5<br />
     - CSS3<br />
     - Javascript<br />
