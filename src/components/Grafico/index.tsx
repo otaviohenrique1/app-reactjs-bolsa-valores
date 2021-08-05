@@ -101,10 +101,10 @@ const dataEmpresaDadosIniciais = {
 }
 
 interface GraficoProps {
-  dataGrafico: any;
-  favoritado?: any;
+  dataGrafico: DataGraficoProps[];
+  favoritado: boolean;
   handleSubmitFavorito?: (event: FormEvent) => void;
-  dataEmpresa: any;
+  dataEmpresa: DataEmpresaProps;
 }
 
 export function Grafico(props: GraficoProps) {
@@ -114,15 +114,9 @@ export function Grafico(props: GraficoProps) {
   useEffect(() => {
     let dataFavoritos = props.dataGrafico;
 
-    setDataGrafico(dataFavoritos.data);
-    setDataEmpresa({
-      nome_empresa: dataFavoritos.nome_empresa,
-      codigo_empresa: dataFavoritos.codigo_empresa,
-      porcentagem: dataFavoritos.porcentagem,
-      valor_acao: dataFavoritos.valor_acao,
-      valor_variacao_dinheiro: dataFavoritos.valor_variacao_dinheiro,
-    });
-  }, [props.dataGrafico]);
+    setDataGrafico(dataFavoritos);
+    setDataEmpresa(dataEmpresa);
+  }, [dataEmpresa, props.dataEmpresa, props.dataGrafico]);
 
   return (
     <GraficoContainer>
